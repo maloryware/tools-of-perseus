@@ -2,6 +2,8 @@
 .gradle/
 out/
 classes/
+/build/
+/.github/
 
 # Quilt Loom
 remappedSrc/
