@@ -31,20 +31,13 @@ jobs:
           BUILD_TIME: ${{ steps.current-time.outputs.formattedTime }}
           BUILD_NUMBER: ${{ github.run_number }}
         run: ./gradlew assemble --rerun-tasks
-      - name: Publish (GitHub Releases)
-        id: publish_github
+      - name: Publish
         uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
         with:
           github-token: ${{ github.token }}
-          files: |
-            **/build/libs/!(*-@(dev|sources|javadoc|slim)).jar
-            **/build/libs/*-@(sources|javadoc).jar
-      - name: Publish (Quilt)
-        id: publish_quilt
-        uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
-        with:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           version: ${{ github.ref_name }}
           files: |
-            Quilt/build/libs/!(*-@(dev|sources|javadoc|slim)).jar
-            Quilt/build/libs/*-@(sources|javadoc).jar
+            **/build/libs/!(*-@(dev|sources|javadoc|slim)).jar
+            **/build/libs/*-@(sources|javadoc).jar
+          
