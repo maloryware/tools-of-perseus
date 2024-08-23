@@ -3,10 +3,8 @@
 name: Upload Release Artifacts
 
 on:
-  push:
-    tags:
-      - '*'
-
+  [ pull_request, workflow_dispatch ]  
+  
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -35,9 +33,10 @@ jobs:
         uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
         with:
           github-token: ${{ github.token }}
+          modrinth-id: C9UObpo7
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           version: ${{ github.ref_name }}
           files: |
             **/build/libs/!(*-@(dev|sources|javadoc|slim)).jar
             **/build/libs/*-@(sources|javadoc).jar
-          
+
