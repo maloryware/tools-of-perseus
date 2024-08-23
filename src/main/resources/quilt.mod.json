@@ -8,7 +8,7 @@
             "name": "Tools of Perseus",
             "description": "Renders all enchanted equipment unbreakable.",
             "contributors": {
-                "maloryware": "Owner"
+                "Mal Larsson-Reyes": "Owner"
             },
             "contact": {},
             "icon": "assets/tools-of-perseus/icon.png",
@@ -29,7 +29,7 @@
             },
             {
                 "id": "minecraft",
-                "versions": ">=1.20"
+                "versions": ">=1.19"
             }
         ]
     },
