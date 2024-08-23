@@ -3,9 +3,8 @@
 name: Upload Release Artifacts
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [published]
 
 jobs:
   publish:
@@ -40,4 +39,4 @@ jobs:
           files: |
             **/build/libs/!(*-@(dev|sources|javadoc|slim)).jar
             **/build/libs/*-@(sources|javadoc).jar
-          
+

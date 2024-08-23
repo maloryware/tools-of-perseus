@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TitleScreenMixin {
     @Inject(method = "init", at = @At("TAIL"))
     public void onInit(CallbackInfo ci) {
-        ToolsOfPerseus.LOGGER.info("maloryware has infected your pc. wooooooo ooooo ooooooo (/s)");
+        ToolsOfPerseus.LOGGER.info("Initialized Tools of Perseus.");
     }
 }
