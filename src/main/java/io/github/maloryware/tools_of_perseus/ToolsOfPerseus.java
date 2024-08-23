@@ -10,6 +10,6 @@ public class ToolsOfPerseus implements ModInitializer {
 
     @Override
     public void onInitialize(ModContainer mod) {
-        LOGGER.info("Hello Quilt world from {}! Stay fresh!", mod.metadata().name());
+        LOGGER.info("Hello Quilt world from {}! Stay worm!", mod.metadata().name());
     }
 }

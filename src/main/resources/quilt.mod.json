@@ -6,12 +6,12 @@
         "version": "${version}",
         "metadata": {
             "name": "Tools of Perseus",
-            "description": "Makes all enchanted weapons unbreakable.",
+            "description": "Renders all enchanted equipment unbreakable.",
             "contributors": {
                 "maloryware": "Owner"
             },
             "contact": {},
-            "icon": "assets/example_mod/icon.png",
+            "icon": "assets/tools-of-perseus/icon.png",
             "license": "MIT"
         },
         "intermediate_mappings": "net.fabricmc:intermediary",
